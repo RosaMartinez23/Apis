@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->integer('Folio')->primary()->autoIncrement();           
+            // Cambiado de integer a bigIncrements para utilizar un tipo de dato comúnmente usado para claves primarias
+            $table->bigIncrements('Folio');           
             $table->date('Fecha');
-            $table->double('Monto_Total', 10,2);
+            $table->double('Monto_Total', 10, 2);
             $table->unsignedBigInteger('id_usuario');
             $table->timestamps();
 

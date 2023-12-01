@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('tbldetalleventas', function (Blueprint $table) {
 
-            $table->id(); 
-
-            $table->integer('Folio_Ventas');
+            $table->bigIncrements('Folio_Ventas');
             $table->string('Codigo_Producto');
 
             $table->integer('Cantidad');
